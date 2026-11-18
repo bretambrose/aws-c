@@ -6,7 +6,7 @@ include(AwsFindPackage)
 set(IN_SOURCE_BUILD ON)
 
 add_subdirectory(aws-c-common)
-if(UNIX AND NOT APPLE)
+if(UNIX)
     # don't build tests for s2n or aws-lc
     set(BUILD_TESTING_PREV ${BUILD_TESTING})
     set(BUILD_TESTING OFF)
